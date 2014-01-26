@@ -1,0 +1,34 @@
+<h1>Recipes List</h1>
+<p>Find me in app/views/recipes/index.html.erb</p>
+
+<% @allRecipes.each do |r| %>
+
+<table class="table table-striped table-hover table-bordered">
+	<tr>
+		<td><h3><%= r.title %></h3></td>
+	</tr>
+	<tr>
+		<td><p>Difficulty: <%= r.difficulty %> - Serves: <%= r.serves %></p></td>
+	</tr>
+
+	<tr>
+		<td>
+			<p><%= r.description %></p>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<p>Ingredients: <%= r.ingredients %></p>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<p>Method: <%= r.method %></p>		
+		</td>
+	</tr>
+
+</table>
+<hr/>
+<% end %>
